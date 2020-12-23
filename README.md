@@ -2,6 +2,8 @@
 ### Expectations
  - You should have knowledge to execute basic Java programs
    - An IDE helps
+   - Demos require at least Java 8+ unless explicitly specified otherwise
+   - Some demos may require a higher version of java - these demos will explicitly specify which version
    
  - For demos using 3rd party libraries, you are expected to know how to add it to your project's build path
    - Links to obtain the library will be provided in the demo as a comment
