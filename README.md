@@ -16,7 +16,7 @@
  
  - If you would like to contribute, feel free to contact me on discord
  
-   - Dioxin#9863
+   - **Dioxin#9863**
    - Content must not introduce design concepts that complicate the learning process
      - Do not introduce new types unless it's a requirement
      - Think in terms of teaching, not designing the most flexible demo possible
