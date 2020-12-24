@@ -60,26 +60,6 @@ public class SelectionSortVSBubbleSortShuffled {
         System.out.println("Selection Swaps: " + swaps);
     }
 
-    static void badSelectionSort(Integer[] numbers) {
-        int swaps = 0;
-
-        for(int i = 0; i < numbers.length; i++) {
-            int indexOfLowest = i;
-
-            for(int j = i + 1; j < numbers.length; j++) {
-                int currentLowest = numbers[indexOfLowest];
-                int nextNumber = numbers[j];
-
-                if(nextNumber < currentLowest) {
-                    swap(numbers, i, j);
-                    swaps++;
-                }
-            }
-
-        }
-        System.out.println("Jesus Swaps: " + swaps);
-    }
-
     static void swap(Integer[] numbers, int index, int otherIndex) {
         int temp = numbers[index];
         numbers[index] = numbers[otherIndex];
