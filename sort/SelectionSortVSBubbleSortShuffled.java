@@ -5,11 +5,11 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class BubbleSort {
+public class SelectionSortVSBubbleSortShuffled {
     public static void main(String[] args) {
         List<Integer> numbers = Arrays.asList(20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0);
 
-        for(int i = 0; i < 10; i++) {
+        for(int i = 0; i < 100; i++) {
             List<Integer> copy = new ArrayList<>(numbers);
             Collections.shuffle(copy);
 
@@ -17,16 +17,12 @@ public class BubbleSort {
             Integer[] bubbleSet = copy.toArray(new Integer[0]);
 
             System.out.println("Data Set:\n" + copy.toString());
+
             bubbleSort(bubbleSet);
             selectionSort(selectionSet);
+
             System.out.println();
         }
-
-        Integer[] num = new Integer[] { 3, 44, 38, 5, 47, 15, 36, 26, 27, 2, 46, 4, 19, 50, 48 };
-        System.out.println("Data Set:\n" + Arrays.toString(num));
-        bubbleSort(num);
-        num = new Integer[] { 8, 2, 3, 4, 5, 6, 7, 1 };
-        selectionSort(num);
     }
 
     static void bubbleSort(Integer[] numbers) {
