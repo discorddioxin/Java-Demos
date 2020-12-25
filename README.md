@@ -1,3 +1,7 @@
+# Wiki
+
+* Check out the Wiki for more resources
+
 # Disclaimers
 * **You should know how to execute basic Java programs**
   * *An IDE helps*
