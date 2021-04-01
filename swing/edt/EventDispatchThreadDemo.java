@@ -1,4 +1,4 @@
-package swing.eventdispatchthread;
+package swing.edt;
 
 import javax.swing.*;
 import java.awt.*;
@@ -6,17 +6,24 @@ import java.awt.*;
 /**
  * This code will freeze the GUI! Use your IDE to stop the program
  */
-public class EventDispatchThreadBlockDemo {
+public class EventDispatchThreadDemo {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             JTextField field = new JTextField(10);
             field.setEnabled(false);
+            field.setForeground(Color.BLACK);
 
             JButton button = new JButton("Start");
             button.addActionListener(event -> {
-                for(long l = 0; l < Long.MAX_VALUE; l++)
-                    if(l % 31 == 0)
-                        field.setText(String.valueOf(l));
+                Thread thread = new Thread(() -> {
+                    for(long l = 0; l < Long.MAX_VALUE; l++)
+                        if(l % 31 == 0) {
+                            long value = l; // variable must be "effectively final"
+                            SwingUtilities.invokeLater(() -> field.setText(String.valueOf(value)));
+                        }
+                });
+
+                thread.start();
             });
 
             JFrame frame = new JFrame("EDT Demo");
