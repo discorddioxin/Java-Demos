@@ -1,4 +1,4 @@
-package swing;
+package swing.misc;
 
 import javax.swing.*;
 import java.awt.*;
