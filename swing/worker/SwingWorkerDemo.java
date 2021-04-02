@@ -12,7 +12,7 @@ public class SwingWorkerDemo {
 
         JButton button = new JButton("Start");
         button.addActionListener(event -> {
-            SwingWorker<Void, Long> worker = new SwingWorker<>() {
+            SwingWorker<Void, Long> worker = new SwingWorker<Void, Long>() {
                 @Override
                 protected Void doInBackground() {
                     for(long l = 0; l < Long.MAX_VALUE; l++)
