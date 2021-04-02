@@ -10,15 +10,17 @@ import java.util.Scanner;
  * Hello World
  *
  */
-public class ScannerNextLineIssueDemo {
+public class ScannerNextLineFixDemo {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println(scanner.nextInt());
+        scanner.nextLine();
         System.out.println(scanner.nextInt());
+        scanner.nextLine();
         System.out.println(scanner.nextLine());
 
-        // Will exit after entering 2nd number
-        // "Hello World" will not print
+        // Calling `nextLine()` after non-`nextLine()` calls fixes the issue
+        // "Hello World" will print
     }
 }
