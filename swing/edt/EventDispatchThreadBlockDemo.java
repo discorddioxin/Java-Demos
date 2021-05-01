@@ -8,7 +8,6 @@ import java.awt.*;
  */
 public class EventDispatchThreadBlockDemo {
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
             JTextField field = new JTextField(10);
             field.setEnabled(false);
 
@@ -28,6 +27,5 @@ public class EventDispatchThreadBlockDemo {
             frame.pack();
 
             frame.setVisible(true);
-        });
     }
 }
